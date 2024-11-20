@@ -1,0 +1,22 @@
+name: My First Workflow
+
+on:
+  push: 
+    branches:
+      - main
+  workflow_dispatch:
+  
+jobs: 
+  MyFirstJob:  
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World!"
+
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - run: |
+          echo "The repository ${{ gitgub.repository }} contains following files:"
+          tree
+      
+      
+
