@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - run: |
-          echo "The repository ${{ gitgub.repository }} contains following files:"
+          echo "The repository ${{ github.repository }} contains following files:"
           tree
       
       
